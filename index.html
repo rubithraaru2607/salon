@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nature Beauty Salon & Academy</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fff8fb;
+            color: #333;
+        }
+
+        header {
+            background: #8e2457;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #64163d;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .hero {
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 30px;
+
+            background:
+                linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+                url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        section {
+            padding: 50px 8%;
+        }
+
+        .title {
+            text-align: center;
+            color: #8e2457;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,.1);
+        }
+
+        .card h3 {
+            color: #8e2457;
+            margin-bottom: 10px;
+        }
+
+        /* APPOINTMENT */
+
+        .appointment {
+            background: #f9e8f0;
+        }
+
+        .booking-box {
+            max-width: 650px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,.15);
+        }
+
+        .booking-box label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        .booking-box input,
+        .booking-box select,
+        .booking-box textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        .booking-box textarea {
+            height: 90px;
+            resize: none;
+        }
+
+        .book-btn {
+            width: 100%;
+            margin-top: 25px;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background: #25D366;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .book-btn:hover {
+            background: #1ebe5d;
+        }
+
+        .whatsapp-note {
+            text-align: center;
+            margin-top: 15px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        footer {
+            background: #64163d;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media(max-width:600px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            nav a {
+                margin: 5px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌸 Nature Beauty Salon & Academy</h1>
+    <p>Kovilpalayam, Coimbatore – 641107</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#appointment">Appointment</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+    <div>
+        <h1>Enhance Your Natural Beauty</h1>
+        <p>Professional Beauty Services & Beauty Academy</p>
+    </div>
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+    <h2 class="title">Our Services</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>💇 Hair Styling</h3>
+            <p>Haircut, Styling & Hair Spa</p>
+            <br>
+            <b>Starting ₹300</b>
+        </div>
+
+        <div class="card">
+            <h3>✨ Facial</h3>
+            <p>Basic & Premium Facial</p>
+            <br>
+            <b>Starting ₹800</b>
+        </div>
+
+        <div class="card">
+            <h3>💅 Nail Care</h3>
+            <p>Manicure & Pedicure</p>
+            <br>
+            <b>Starting ₹400</b>
+        </div>
+
+        <div class="card">
+            <h3>👰 Bridal Makeup</h3>
+            <p>Beautiful bridal makeup packages</p>
+            <br>
+            <b>Starting ₹8,000</b>
+        </div>
+
+    </div>
+</section>
+
+<!-- APPOINTMENT -->
+
+<section class="appointment" id="appointment">
+
+    <h2 class="title">📅 Book Your Appointment</h2>
+
+    <div class="booking-box">
+
+        <form id="bookingForm">
+
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label>Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+            <label>Select Service</label>
+            <select id="service" required>
+                <option value="">-- Select Service --</option>
+                <option>Haircut</option>
+                <option>Hair Styling</option>
+                <option>Hair Spa</option>
+                <option>Facial</option>
+                <option>Manicure</option>
+                <option>Pedicure</option>
+                <option>Party Makeup</option>
+                <option>Bridal Makeup</option>
+            </select>
+
+            <label>Appointment Date</label>
+            <input type="date" id="date" required>
+
+            <label>Appointment Time</label>
+            <input type="time" id="time" required>
+
+            <label>Message</label>
+            <textarea id="message" placeholder="Any special request?"></textarea>
+
+            <button type="submit" class="book-btn">
+                💚 Book Appointment on WhatsApp
+            </button>
+
+            <p class="whatsapp-note">
+                Your appointment details will open in WhatsApp.
+            </p>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+    <h2 class="title">Contact Us</h2>
+
+    <div class="card">
+        <h3>📍 Nature Beauty Salon & Academy</h3>
+        <br>
+        <p>Kovilpalayam, Coimbatore – 641107</p>
+        <p>📞 +91 XXXXX XXXXX</p>
+        <p>📧 naturebeautysalon@gmail.com</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Nature Beauty Salon & Academy</p>
+    <p>Beauty • Style • Confidence</p>
+</footer>
+
+
+<script>
+
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let service = document.getElementById("service").value;
+    let date = document.getElementById("date").value;
+    let time = document.getElementById("time").value;
+    let message = document.getElementById("message").value;
+
+    let whatsappNumber = "917358069629";
+
+    let whatsappMessage =
+    "🌸 NEW APPOINTMENT REQUEST 🌸\n\n" +
+    "👤 Name: " + name + "\n" +
+    "📞 Phone: " + phone + "\n" +
+    "💇 Service: " + service + "\n" +
+    "📅 Date: " + date + "\n" +
+    "⏰ Time: " + time + "\n" +
+    "📝 Message: " + message + "\n";
+
+let whatsappURL =
+        "https://wa.me/" + whatsappNumber +
+        "?text=" + whatsappMessage;
+
+    window.open(whatsappURL, "_blank");
+
+});
+
+</script>
+
+</body>
+</html>
